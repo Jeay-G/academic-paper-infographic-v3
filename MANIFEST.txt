@@ -1,0 +1,9 @@
+Academic Paper Infographic Skill V3
+
+Files:
+- SKILL.md
+- README.md
+- references/content-extraction-and-lock.md
+- references/image-render.md
+- references/html-render.md
+- references/post-render-qa.md
