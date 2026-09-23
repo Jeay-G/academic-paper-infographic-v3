@@ -2,7 +2,7 @@
 name: academic-paper-infographic-v3
 description: Turn one academic paper, abstract, framework paper, review, design-fiction paper, or research article into source-grounded Chinese infographic copy and a complete vertical academic long image. The content must explain not only what the paper concludes, but why and how the conclusion is supported. When the user requests ImageGen, use any image-generation capability available in the host agent; when the user explicitly requests HTML, use the HTML/CSS/SVG route. Default to a vertical long image and do not ask for a size unless the user explicitly imposes one.
 metadata:
-  version: "3.0.0"
+  version: "3.1.1"
 ---
 
 # 学术论文信息图长图 V3
@@ -41,6 +41,25 @@ metadata:
 不要主动询问 16:9、9:16、像素尺寸或固定比例。
 
 画布服务内容，不为了满足预设尺寸删掉关键论证。
+
+### 4. 先建立这篇论文自己的 Visual Identity
+
+在开始排版、绘制或生成图像之前，必须先在内部完成一次 Art Direction；不要把这一步当作需要用户审批的设计提案，也不要默认套用常见学术信息图皮肤。根据已锁定的论文内容确定：
+
+1. **核心视觉母题**：选择 1–2 个源自论文的对象或关系，能贯穿并解释整张图。
+2. **主要视觉媒介**：选择一套适合论文的视觉语言，并让插画、图表、文字和注释属于同一套出版物。
+3. **语义色彩系统**：颜色对应研究对象、状态、组别或证据，不做无依据的装饰。
+4. **图形语言**：确定形状、线条、纹理、连接方式与数据图形的共同语法。
+5. **信息节奏**：安排视觉焦点、阅读密度、安静区域以及各区域的强弱变化。
+
+所有页面和章节都必须遵守并发展同一套 Visual Identity。最终应该让人感到视觉语言是从这篇论文的研究结构中生长出来的，而不是换了文字也能复用的通用皮肤。Image 与 HTML 的具体要求分别见对应渲染规范。
+
+### 5. 可读性与对比度是硬门槛
+
+- 每种文字颜色都必须对照它实际出现的背景检查；不能只看全局主题色或 CSS 继承值。深色区要为标题、正文、注释分别指定浅色文字，浅色卡片内则指定深色文字。
+- 禁止深色文字落在深色背景、浅色文字落在浅色背景；禁止为了装饰使用低对比度灰字。
+- 正文在最终导出图的 100% 比例下必须轻松辨读；若显得吃力，优先改文字颜色、字号、字重、容器宽度或内容分区，不得让用户放大图片才能读。
+- 渲染后必须检查整图和正文重点区域；任何一块对比不足、正文发灰、标签或数字辨读困难，都判定未通过并修复后重渲。
 
 ## 安全与事实边界
 
@@ -104,7 +123,8 @@ metadata:
 2. 使用同一份已锁定的 `final_content_pack`。
 3. 默认竖版长图，高度随内容自然延展。
 4. 使用 HTML + CSS + SVG / 原生图表完成并渲染为 PNG。
-5. 不调用生成式图像模型。
+5. 若浏览器安全策略拒绝预览本地 HTML，不得通过其他浏览器、命令行、CDP 或替代界面绕过；停止渲染，标记任务未验收，并向用户说明需要其提供预览截图。
+6. 不调用生成式图像模型。
 
 ## 渲染前覆盖门
 

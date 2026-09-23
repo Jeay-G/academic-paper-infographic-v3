@@ -1,4 +1,4 @@
-# Academic Paper Infographic Skill V3
+# Academic Paper Infographic Skill V3.1.1
 
 ## Core workflow
 
@@ -15,3 +15,5 @@
 Compress wording, not reasoning.
 
 The graphic must let the reader understand not only what the paper concludes, but why the conclusion is supported.
+
+Before rendering, establish a paper-specific visual identity: a research-derived motif, a coherent medium and semantic color system, a consistent graphic language, and a deliberate information rhythm. Image and HTML routes follow the same identity principle, with route-specific visual requirements.
