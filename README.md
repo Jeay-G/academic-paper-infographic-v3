@@ -1,4 +1,4 @@
-# Academic Paper Infographic Skill V3.1.1
+# Academic Paper Infographic Skill V3.1.2
 
 ## Core workflow
 

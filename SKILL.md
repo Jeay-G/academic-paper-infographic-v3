@@ -2,7 +2,7 @@
 name: academic-paper-infographic-v3
 description: Turn one academic paper, abstract, framework paper, review, design-fiction paper, or research article into source-grounded Chinese infographic copy and a complete vertical academic long image. The content must explain not only what the paper concludes, but why and how the conclusion is supported. When the user requests ImageGen, use any image-generation capability available in the host agent; when the user explicitly requests HTML, use the HTML/CSS/SVG route. Default to a vertical long image and do not ask for a size unless the user explicitly imposes one.
 metadata:
-  version: "3.1.1"
+  version: "3.1.2"
 ---
 
 # 学术论文信息图长图 V3
