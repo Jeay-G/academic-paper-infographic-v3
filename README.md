@@ -17,3 +17,7 @@ Compress wording, not reasoning.
 The graphic must let the reader understand not only what the paper concludes, but why the conclusion is supported.
 
 Before rendering, establish a paper-specific visual identity: a research-derived motif, a coherent medium and semantic color system, a consistent graphic language, and a deliberate information rhythm. Image and HTML routes follow the same identity principle, with route-specific visual requirements.
+
+## Examples
+
+Browse the [infographic examples](examples/README.md) for four complete outputs across medical research and the SpeakerMem-R1 paper.

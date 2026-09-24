@@ -7,3 +7,8 @@ Files:
 - references/image-render.md
 - references/html-render.md
 - references/post-render-qa.md
+- examples/README.md
+- examples/glioma-cd14-editorial-structured.png
+- examples/glioma-cd14-image-illustrated.png
+- examples/glioma-cd14-study-summary.png
+- examples/speakermem-r1-infographic.png
